@@ -65,7 +65,7 @@ body, html {
 
     .logo a {
         color: #182524;
-        width: 100px;
+        width: 100%;
         display: block;
         margin-top: 29px;
         margin-bottom: 28px;
@@ -88,7 +88,7 @@ body, html {
      }
 
 
-@media all and (min-width: 1024px) {
+@media all and (min-width: 100vw) {
 
     /*header nav style*/
     .header.header-prepare .nav-menu ul.nav-menu-inner > li > a {
@@ -110,7 +110,7 @@ body, html {
         }
 }
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 100vw) {
     .header {
         height: 58px;
     }
@@ -594,7 +594,7 @@ header.header-prepare .nav-bar-icon > span::after {
         background-color: #000000;
     }
 
-@media all and (max-width: 960px) {
+@media all and (max-width: 100vw) {
     .overlay-menu-active .overlay-menu {
         position: absolute;
     }
@@ -624,11 +624,25 @@ body{
 .line-1{
     position: relative;
     top: 10vh;  
-    width: 400px;
+    width: 300px;
     margin: 0 auto;
     border-right: 2px solid #182524;
     font-size: 200%;
-    text-align: center;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+.line-2{
+    position: relative;
+    top: 10vh;  
+    width: 300px;
+    margin: 0 auto;
+    color: white;
+    border-right: 2px solid #000000;
+    font-size: 200%;
+    text-align: left;
     white-space: nowrap;
     overflow: hidden;
     transform: translateY(-50%);    
@@ -642,7 +656,7 @@ body{
 @keyframes typewriter{
   from{width: 0; word-break: break-all;}
   
-  to{width: 15em; word-break: break-all;}
+  to{width: 80vw; word-break: break-all;}
 }
 @keyframes blinkTextCursor{
   from{border-right-color: rgba(255,255,255,.75);}
@@ -724,6 +738,6 @@ color: #fff;
 }
 
 html {
-    min-width: 515px;
+    min-width: 300px;
    width: 100vw;
 }
