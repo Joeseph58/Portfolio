@@ -203,7 +203,7 @@ body, html {
 }
 
 /* Mobile bar icon */
-.nav-mobile.nav-bar-icon {
+.nav-mobile .nav-bar-icon {
     display: none;
 }
 
@@ -372,7 +372,7 @@ header.header-prepare .nav-bar-icon > span::after {
     }
 
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 200px) {
     .nav-menu ul.nav-menu-inner li {
         display: block;
         width: 100%;
@@ -640,8 +640,9 @@ body{
              blinkTextCursor 500ms steps(44) infinite normal;
 }
 @keyframes typewriter{
-  from{width: 0;}
-  to{width: 15em;}
+  from{width: 0; word-break: break-all;}
+  
+  to{width: 15em; word-break: break-all;}
 }
 @keyframes blinkTextCursor{
   from{border-right-color: rgba(255,255,255,.75);}
@@ -722,3 +723,7 @@ color: #fff;
     background-color: #000;
 }
 
+html {
+    min-width: 515px;
+   width: 100vw;
+}
